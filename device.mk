@@ -106,7 +106,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
-#  Lights
+# zRam
+PRODUCT_PACKAGES += \
+    set_zram.sh
+
+# Lights
+>>>>>>> c302f7a... a6000: setup zRam using shell script
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.realme_trinket
 

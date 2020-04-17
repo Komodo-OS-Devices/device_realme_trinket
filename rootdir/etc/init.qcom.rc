@@ -24,6 +24,18 @@ service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     user radio
     socket ims_datad stream 0660 system radio
     group radio wifi inet vendor_qti_diag log
+    group radio cache inet misc audio log readproc wakelock
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+
+service set_zram /vendor/bin/sh /system/vendor/bin/set_zram.sh
+    class late_start
+    disabled
+    user root
+    group system
+    oneshot
+
+service set_baseband /vendor/bin/sh /system/vendor/bin/set_baseband.sh
+    class late_start
     disabled
 
 on property:init.svc.cnss_diag=running
@@ -34,3 +46,9 @@ on property:init.svc.tcpdump=running
 
 on property:init.svc.vendor.ipacm-diag=running
     stop vendor.ipacm-diag
+
+# Start it again on boot, just being double sure.
+on property:sys.boot_completed=1
+    start set_baseband
+    start set_zram
+    restart cameraserver
