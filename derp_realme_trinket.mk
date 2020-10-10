@@ -12,10 +12,6 @@ $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 # Setup Gapps options
 IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_MINIMAL_APPS := false
-TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := Realme
@@ -26,3 +22,16 @@ PRODUCT_NAME := derp_realme_trinket
 BUILD_FINGERPRINT := "trinket-user-10-QKQ1.200209.002--release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
+
+#Include Gapps
+#TARGET_GAPPS_ARCH := arm64
+#TARGET_INCLUDE_GAPPS := true
+
+#Without Gapps
+#ANCIENT_NOGAPPS := true
+#TARGET_INCLUDE_GAPPS := false
+
+#Some Addons
+#TARGET_INCLUDE_STOCK_ARCORE := true
+#TARGET_MINIMAL_APPS := false
+#TARGET_SUPPORTS_GOOGLE_RECORDER := false
