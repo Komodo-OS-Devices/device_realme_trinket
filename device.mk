@@ -48,13 +48,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     BluetoothQti
 
-# Camera
-PRODUCT_PACKAGES += \
-<<<<<<< HEAD
-    Snap
-<<<<<<< HEAD
-=======
-    
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/apdr.conf:system/etc/apdr.conf \
@@ -64,14 +57,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/xtwifi.conf:system/etc/xtwifi.con
-=======
+
+# CAM
+PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     libgui_vendor \
     libstdc++.vendor \
     GCam
->>>>>>> c2ee90f... onclite: Include Gcam Go
->>>>>>> e1c9857... onclite: Include Gcam Go
 
 # Display
 PRODUCT_PACKAGES += \
