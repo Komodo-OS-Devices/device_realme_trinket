@@ -3,6 +3,9 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    org.komodo.maintainer=henshin
 
 # Adb
 ifeq ($(TARGET_BUILD_VARIANT),eng)
