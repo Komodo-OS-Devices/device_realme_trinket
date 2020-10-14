@@ -24,8 +24,8 @@ BUILD_FINGERPRINT := "trinket-user-10-QKQ1.200209.002--release-keys"
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 #Include Gapps
-#TARGET_GAPPS_ARCH := arm64
-#TARGET_INCLUDE_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_GAPPS := true
 
 #Without Gapps
 #TARGET_INCLUDE_GAPPS := false
@@ -38,6 +38,6 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 
 #Official Komodo
 KOMODO_BUILD_TYPE := OFFICIAL
-CURRENT_BUILD_TYPE := nogapps
+CURRENT_BUILD_TYPE := gapps
 KOMODO_OFFICIAL := true
 
