@@ -156,8 +156,39 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.va_aosp.support=1
 
 # VoLTE / VoWiFi
-persist.dbg.volte_avail_ovr=1
-persist.dbg.ims_volte_enable=1
-persist.dbg.vt_avail_ovr=1
-persist.radio.calls.on.ims=1 
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.dbg.volte_avail_ovr=1 \
+persist.dbg.ims_volte_enable=1 \
+persist.dbg.vt_avail_ovr=1 \
+persist.radio.calls.on.ims=1 \
 persist.dbg.wfc_avail_ovr=1
+
+#Ram Managemant
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.config.hw_fast_dormancy=1
+
+#Enable Zygote Preforking
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.device_config.runtime_native.usap_pool_enabled=true
+
+#SurfaceFlinger Boost
+PRODUCT_PROPERTY_OVERRIDES += \
+debug.sf.disable_backpressure=1 \
+debug.sf.early_phase_offset_ns=1500000 \
+debug.sf.early_app_phase_offset_ns=1500000 \
+debug.sf.early_gl_phase_offset_ns=3000000 \
+debug.sf.early_gl_app_phase_offset_ns=15000000 \
+debug.sf.enable_gl_backpressure=1 \
+debug.sf.enable_hwc_vds=1 \
+debug.sf.latch_unsignaled=1 \
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+ro.surface_flinger.max_virtual_display_dimension=4096 \
+ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
+ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
+ro.min.fling_velocity=140 \
+ro.max.fling_velocity=40000
+
+#YT
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.display-size=3840x2160
