@@ -192,3 +192,11 @@ ro.max.fling_velocity=40000
 #YT
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.display-size=3840x2160
+    
+#SmoothAF
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.service.lgospd.enable=0 \
+persist.service.pcsync.enable=0 \
+touch.presure.scale=0.001 \
+system_smooth_lcd=100% \
+Faster_system_multitasking=2x
