@@ -21,3 +21,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Priv-app permission
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
+
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    org.komodo.maintainer=henshin

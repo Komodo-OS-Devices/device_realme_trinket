@@ -7,7 +7,7 @@
 $(call inherit-product, device/realme/realme_trinket/device.mk)
 
 # Inherit some common Aosip stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+$(call inherit-product, vendor/komodo/config/common_full_phone.mk)
 
 # Setup Gapps options
 IS_PHONE := true
@@ -21,8 +21,13 @@ TARGET_BOOT_ANIMATION_RES := 1080
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := realme_trinket
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := aosp_realme_trinket
+PRODUCT_NAME := komodo_realme_trinket
 
 BUILD_FINGERPRINT := "trinket-user-10-QKQ1.200209.002--release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
+
+#Official Komodo
+KOMODO_BUILD_TYPE := RELEASE
+CURRENT_BUILD_TYPE := nogapps
+KOMODO_OFFICIAL := true
